@@ -1,0 +1,80 @@
+{% if win %}
+<div id="winners-cirlce">
+    {% include 'win.html' %}
+</div>
+{% endif %}
+<div class="word-container d-flex justify-content-center" id="startword">
+    <div class="d-flex flex-row flex-nowrap justify-content-center">
+        {% for ltr in word1.wordname %}
+        <div class="flip-card p-2">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    {{ ltr }}
+                </div>
+                <div class="flip-card-back">
+                    <input type="text" default="" onfocus="focus_ltr()" onfocusout="this.parentElement.parentElement.parentElement.classList.remove('flipped')" maxlength="1">
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="definitions overflow-auto">
+        <div class="noun">
+            {% if word1.def_noun %}
+                Noun: <span id="def_noun">{{word1.def_noun}}</span>
+            {% endif %}
+        </div>
+        <div class="verb">
+            {% if word1.def_verb %}
+                Verb: <span id="def_verb">{{word1.def_verb}}</span>
+            {% endif %}
+        </div>
+        <div class="adverb">
+            {% if word1.def_adverb %}
+                Adjective: <span id="def_adverb">{{word1.def_adverb }}</span>
+            {% endif %}
+        </div>
+        <div class="adjective">
+            {% if word1.def_adjective %}
+                Adjective: <span id="def_adjective">{{word1.def_adjective}}</span>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="word-container d-flex justify-content-center" id="endword">
+    <div class="d-flex flex-row flex-nowrap justify-content-center">
+        {% for ltr in word2.wordname %}
+        <div class="flip-card p-2">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    {{ ltr }}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="definitions overflow-auto">
+        <div class="definitions overflow-auto">
+            <div class="noun">
+                {% if word2.def_noun %}
+                    Noun: {{word2.def_noun}}
+                {% endif %}
+            </div>
+            <div class="verb">
+                {% if word2.def_verb %}
+                    Verb: {{word2.def_verb}}
+                {% endif %}
+            </div>
+            <div class="adverb">
+                {% if word2.def_adverb %}
+                    Adjective: {{word2.def_adverb }}
+                {% endif %}
+            </div>
+            <div class="adjective">
+                {% if word2.def_adjective %}
+                    Adjective: {{word2.def_adjective}}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

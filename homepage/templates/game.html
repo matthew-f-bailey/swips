@@ -1,0 +1,13 @@
+<div id="min-swaps" class="word-container d-flex justify-content-center">
+    <!-- Minimum number of swaps -->
+    <span>Minimum number of swaps needed: {{ min_possible_swaps }}</span>
+</div>
+
+<div id="the-words">
+    {% include 'words.html' with word1=word1 word2=word2 %}
+</div>
+
+<div id="guess-word" style="display: none;">{{guess_word}}</div>
+<div class="d-grid container" id="submit-button-container">
+    <button id="submit-button" onclick="submit_guess()" type="button" class="btn btn-outline-success btn-lg btn-block">Submit</button>
+</div>

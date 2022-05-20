@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block page_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/style.css' %}">
+<script src="{% static 'homepage/main.js' %}"></script>
+
+<div id="history">
+    <!-- History of guesses get loaded here -->
+</div>
+
+<div id="game-container">
+
+    <!-- <div class="word-container d-flex justify-content-center" id="startword">
+        <div class="d-flex flex-row flex-nowrap justify-content-center">
+            {% for ltr in word1.name %}
+            <div class="flip-card p-2">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        {{ ltr }}
+                    </div>
+                    <div class="flip-card-back">
+                        <input type="text" default="" onfocus="focus_ltr()" onfocusout="this.parentElement.parentElement.parentElement.classList.remove('flipped')" maxlength="1">
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="definitions overflow-auto">
+            <div class="nouns">
+                {% if word1.nouns %}
+                <ul>
+                    Nouns:
+                    {% for definition in word1.nouns %}
+                    <li>{{definition}}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <div class="verbs">
+                {% if word1.verbs %}
+                <ul>
+                    Verbs:
+                    {% for definition in word1.verbs %}
+                    <li>{{definition}}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <div class="adjectives">
+                {% if word1.adjectives %}
+                <ul>
+                    Adjectives:
+                    {% for definition in word1.adjectives %}
+                    <li>{{definition}}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <div class="adverbs">
+                {% if word1.adverbs %}
+                <ul>
+                    Adverbs:
+                    {% for definition in word1.adverbs %}
+                    <li>{{definition}}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="word-container d-flex justify-content-center" id="endword">
+        <div class="d-flex flex-row flex-nowrap justify-content-center">
+            {% for ltr in word2.name %}
+            <div class="flip-card p-2">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        {{ ltr }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="definitions overflow-auto">
+            <div class="nouns">
+                {% if word2.nouns %}
+                <ul>
+                    Nouns:
+                    {% for definition in word2.nouns %}
+                    <li>{{definition}}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <div class="verbs">
+                {% if word2.verbs %}
+                <ul>
+                    Verbs:
+                    {% for definition in word2.verbs %}
+                    <li>{{definition}}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <div class="adjectives">
+                {% if word2.adjectives %}
+                <ul>
+                    Adjectives:
+                    {% for definition in word2.adjectives %}
+                    <li>{{definition}}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <div class="adverbs">
+                {% if word2.adverbs %}
+                <ul>
+                    Adverbs:
+                    {% for definition in word2.adverbs %}
+                    <li>{{definition}}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div id="guess-word" style="display: none;">{{guess_word}}</div>
+    <div class="d-grid container" id="submit-button-container">
+        <button id="submit-button" onclick="submit_guess()" type="button" class="btn btn-outline-success btn-lg btn-block">Submit</button>
+    </div> -->
+
+</div>
+{% endblock %}
